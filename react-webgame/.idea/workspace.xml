@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bddbd47f-1f1e-4ad4-85a6-00ea3fe6419f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.구구단/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.구구단/index.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1VsrSaGZwTEZcJOPdGDnhIsFaBI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/react-webgame/lecture/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bddbd47f-1f1e-4ad4-85a6-00ea3fe6419f" name="Default Changelist" comment="" />
+      <created>1578052643993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578052643993</updated>
+      <workItem from="1578052645411" duration="942000" />
+      <workItem from="1578054167493" duration="2248000" />
+      <workItem from="1578056586667" duration="845000" />
+      <workItem from="1578057445687" duration="1980000" />
+      <workItem from="1578059669438" duration="124000" />
+      <workItem from="1578059808305" duration="98000" />
+      <workItem from="1578059919162" duration="44000" />
+      <workItem from="1578059977303" duration="2147000" />
+      <workItem from="1578310144426" duration="401000" />
+      <workItem from="1578310561916" duration="52000" />
+      <workItem from="1578310624379" duration="3782000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="836" y="272" key="#Plugins" timestamp="1578310611495">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="836" y="272" key="#Plugins/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578059791072" />
+    <state x="836" y="272" key="#Plugins/263.1103.1440.812/0.23.1920.1057@0.23.1920.1057" timestamp="1578310611495" />
+    <state x="424" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578056847286">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="424" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578056847286" />
+    <state x="567" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1578053798916">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="567" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578053798916" />
+    <state x="619" y="248" width="1257" height="722" key="SettingsEditor" timestamp="1578310658473">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="828" y="226" key="SettingsEditor/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578060063515" />
+    <state x="619" y="248" width="1257" height="722" key="SettingsEditor/263.1103.1440.812/0.23.1920.1057@0.23.1920.1057" timestamp="1578310658473" />
+    <state x="828" y="226" key="SettingsEditor/263.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578310052513" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1578310600564">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578059750686" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/263.1103.1440.812/0.23.1920.1057@0.23.1920.1057" timestamp="1578310600564" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/263.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578309822515" />
+  </component>
+</project>
