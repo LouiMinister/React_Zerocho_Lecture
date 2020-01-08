@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>구구단</title>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type ="text/babel">
+
+            const GuGuDan = () => {
+
+                // 변수자리에 배열, 객체 쓰는것 : 비구조화 문법(Destructuring)
+                const [first, setFirst] = React.useState(Math.ceil( Math.random() * 9 ));
+                const [second, setSecond] = React.useState(Math.ceil( Math.random() * 9 ));
+                const [value, setValue] = React.useState('3');
+                const [result, setResult] = React.useState('');
+
+                //
+                const inputRef = React.useRef(null);
+
+                const onChangeInput = (e) => {
+                    setValue(e.target.value);
+                };
+
+                const onSubmitForm = (e) => {
+                    e.preventDefault();
+
+                    if (parseInt(value) === first * second){
+
+                        setResult((c) => {
+                            return '정답: ' + value;
+                        });
+                        setFirst(Math.ceil( Math.random() * 9 ));
+                        setSecond(Math.ceil( Math.random() * 9 ));
+                        setValue('');
+                        // 렌더를 비동기로 처리하기 때문에 렌더를 4번 부르지 않는다.
+
+                    } else {
+                        setValue('');
+                        setResult('땡');
+
+                    }
+                    inputRef.current.focus();
+                };
+
+                //console.log("렌더링")
+                // state 바뀌면 함수 전체가 다시 렌더링
+                return (
+                    <React.Fragment>
+                        <div>{first} 곱하기 {second} 는?</div>
+                        <form onSubmit={onSubmitForm}>
+                            <input ref={inputRef} onChange={onChangeInput} type="number"/>
+                            <button id="button" className="name">입력!</button>
+                        </form>
+                        <div>{result}</div>
+
+                    </React.Fragment>
+                );
+            }
+        </script>
+        <script type="text/babel">
+            ReactDOM.render(<GuGuDan />, document.querySelector('#root'));
+        </script>
+    </body>
+</html>
