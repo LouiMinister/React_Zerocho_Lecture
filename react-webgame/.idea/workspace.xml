@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="bddbd47f-1f1e-4ad4-85a6-00ea3fe6419f" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1.구구단/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/1.구구단/index.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="bddbd47f-1f1e-4ad4-85a6-00ea3fe6419f" name="Default Changelist" comment="" />
+>>>>>>> 89640a824565f2e2edaf1b65c4826a15eb6ffaea
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1VsrSaGZwTEZcJOPdGDnhIsFaBI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+  <component name="ProjectId" id="1VsrSaGZwTEZcJOPdGDnhIsFaBI" />
+>>>>>>> 89640a824565f2e2edaf1b65c4826a15eb6ffaea
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -23,10 +31,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+=======
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+>>>>>>> 89640a824565f2e2edaf1b65c4826a15eb6ffaea
   </component>
   <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/react-webgame/lecture/index.html" useBuiltInWebServerPort="true">
@@ -67,10 +81,14 @@
       <workItem from="1578059669438" duration="124000" />
       <workItem from="1578059808305" duration="98000" />
       <workItem from="1578059919162" duration="44000" />
+<<<<<<< HEAD
       <workItem from="1578059977303" duration="2147000" />
       <workItem from="1578310144426" duration="401000" />
       <workItem from="1578310561916" duration="52000" />
       <workItem from="1578310624379" duration="3782000" />
+=======
+      <workItem from="1578059977303" duration="795000" />
+>>>>>>> 89640a824565f2e2edaf1b65c4826a15eb6ffaea
     </task>
     <servers />
   </component>
@@ -78,11 +96,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="836" y="272" key="#Plugins" timestamp="1578310611495">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="836" y="272" key="#Plugins/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578059791072" />
     <state x="836" y="272" key="#Plugins/263.1103.1440.812/0.23.1920.1057@0.23.1920.1057" timestamp="1578310611495" />
+=======
+    <state x="836" y="272" key="#Plugins" timestamp="1578059791072">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="836" y="272" key="#Plugins/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578059791072" />
+>>>>>>> 89640a824565f2e2edaf1b65c4826a15eb6ffaea
     <state x="424" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578056847286">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -91,6 +116,7 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="567" y="152" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578053798916" />
+<<<<<<< HEAD
     <state x="619" y="248" width="1257" height="722" key="SettingsEditor" timestamp="1578310658473">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -103,5 +129,16 @@
     <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578059750686" />
     <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/263.1103.1440.812/0.23.1920.1057@0.23.1920.1057" timestamp="1578310600564" />
     <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/263.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578309822515" />
+=======
+    <state x="828" y="226" key="SettingsEditor" timestamp="1578060063515">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="828" y="226" key="SettingsEditor/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578060063515" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1578308031825">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/1403.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578059750686" />
+    <state x="625" y="258" width="670" height="676" key="search.everywhere.popup/263.1103.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1578308031825" />
+>>>>>>> 89640a824565f2e2edaf1b65c4826a15eb6ffaea
   </component>
 </project>
