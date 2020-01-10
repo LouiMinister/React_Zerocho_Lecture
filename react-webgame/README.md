@@ -1,6 +1,6 @@
 # 목차
 
-[강의 원본](https://www.youtube.com/playlist?list=PLcqDmjxt30RtqbStQqk-eYMK8N-1SYIFn)
+[강의 URI](https://www.youtube.com/playlist?list=PLcqDmjxt30RtqbStQqk-eYMK8N-1SYIFn)
 
 
 
