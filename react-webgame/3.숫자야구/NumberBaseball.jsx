@@ -29,9 +29,16 @@ class NumberBaseball extends Component {
                 </form>
                 <div>시도: {this.state.tries.length}</div>
                 <ul>
-                    {['바나나','사과','포도','감','귤'].map( (v) => {
+                    {[
+                        { fruit: '바나나', taste: '노랗다'},
+                        { fruit: '귤', taste: '누렇다'},
+                        { fruit: '밤', taste: '떯다'},
+                        { fruit: '감', taste: '달다'},
+                        { fruit: '포도', taste: '파랗다'},
+                        { fruit: '맥', taste: '역겹다'},
+                    ].map( (v, i) => {
                         return (
-                            <li>{v}</li>
+                            <li key = {v.fruit + v.taste}>{i}. {v.fruit} - {v.taste}</li>
                         );
                     })}
                 </ul>
