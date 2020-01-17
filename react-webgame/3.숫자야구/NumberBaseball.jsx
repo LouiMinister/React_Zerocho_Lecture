@@ -41,7 +41,7 @@ class NumberBaseball extends Component {
                 <ul>
                     {this.fruits.map( (v, i) => {
                         return (
-                            <Try value={v} index={i}/>
+                            <Try key={v.fruit + v.taste} value={v} index={i}/>
                         );
                     })}
                 </ul>
