@@ -1,8 +1,12 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
-class Test extends Component {
+class Test extends PureComponent {
     state = {
         counter :0,
+        string: 'hello',
+        number: 1,
+        boolean: true,
+
     };
 
     // true일 때 렌더링하고 false일 때 렌더링 하지 않음
