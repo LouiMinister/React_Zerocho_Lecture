@@ -1,7 +1,7 @@
 const path = require('path');   // 현재 폴더 경로를 잡아줌
 
 module.exports = {
-    name : 'wordrelay-setting',
+    name : 'responsecheck-setting',
     mode : 'development', // 실서비스 : production
     devtool: 'eval', // 빠르게 하겠다
     resolve : {         // js, jsx 파일을 자동으로 찾아줌
