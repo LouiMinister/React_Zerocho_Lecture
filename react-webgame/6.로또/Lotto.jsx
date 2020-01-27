@@ -22,18 +22,15 @@ class Lotto extends Component {
         redo: false,
     };
 
-    timeouts = [];
-
-    // 컴포넌트가 렌더링 되고 시작
-    componentDidMount() {
+    runTimeouts = () => {
         const {winNumbers} =this.state;
         for (let i=0 ; i< this.state.winNumbers.length -1 ; i++){
             this.timeouts[i] = setTimeout ( () => {
-               this.setState((prevState) => {
-                   return {
-                   winBalls: [...prevState.winBalls, winNumbers[i]],
-                   }
-               }) ;
+                this.setState((prevState) => {
+                    return {
+                        winBalls: [...prevState.winBalls, winNumbers[i]],
+                    }
+                }) ;
             }, (i+1)* 1000);
         }
         this.timeouts[6] = setTimeout( () => {
@@ -42,6 +39,20 @@ class Lotto extends Component {
                 redo: true,
             });
         }, 7000);
+    };
+
+    timeouts = [];
+    // 컴포넌트가 렌더링 되고 시작
+    componentDidMount() {
+        this.runTimeouts();
+    }
+
+    // setState 불릴 때 마다 실행됨
+    componentDidUpdate(prevProps, prevState) {
+        // redo를 눌렀을 때 동작.
+        if (this.state.winBalls.length === 0){
+            this.runTimeouts();
+        }
     }
 
     // 컴포넌트가 없어졌는데 timeout이 돌아가는 것을 방지
@@ -50,6 +61,16 @@ class Lotto extends Component {
             clearTimeout(v)
         });
     }
+
+    onClickRedo = () =>{
+        this.setState({
+            winNumbers: getWinNumbers(),
+            winBalls: [],
+            bonus: null,
+            redo: false,
+        });
+        this.timeouts = [];
+    };
 
     render(){
         const { winBalls, bonus, redo} = this.state;
