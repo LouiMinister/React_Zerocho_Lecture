@@ -1,4 +1,4 @@
-import React, {Component, useState, useRef, useEffect } from 'react';
+import React, {useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import Ball from './Ball';
 
 function getWinNumbers() {
@@ -14,20 +14,23 @@ function getWinNumbers() {
 }
 
 
-const Lotto = () => {
-    const [winNumbers, setWinNumbers] = useState(getWinNumbers());
+const Lotto = (callback, inputs) => {
     const [winBalls, setWinBalls] = useState([]);
+    const lottoNumbers = useMemo(() => getWinNumbers(), [winNumbers]);
+    const [winNumbers, setWinNumbers] = useState(lottoNumbers);
     const [bonus, setBonus]  = useState(null);
     const [redo, setRedo] = useState(false);
     const timeouts = useRef([]);
 
-    const onClickRedo = () =>{
+    const onClickRedo = useCallback(() => {
+        console.log('onClickRedo');
+        console.log(winNumbers);
         setWinNumbers(getWinNumbers());
         setWinBalls([]);
         setBonus(null);
         setRedo(false);
         timeouts.current = []
-    };
+    }, [winNumbers]);
 
     useEffect( () => {
         for (let i=0 ; i< winNumbers.length -1 ; i++){
@@ -45,7 +48,7 @@ const Lotto = () => {
                 clearTimeout(v);
             });
         };
-    }, [winBalls.length === 0]); // 빈 배열이면 componentDidMount와 동일 (배열에는 조건, 또는 바뀌는 값을 넣어둠)
+    }, [timeouts.current]); // 빈 배열이면 componentDidMount와 동일 (배열에는 조건, 또는 바뀌는 값을 넣어둠)
             // 배열에 요소가 있으면 componentDidMount와 ComponentDidUpdate 둘 다 수행
 
 
