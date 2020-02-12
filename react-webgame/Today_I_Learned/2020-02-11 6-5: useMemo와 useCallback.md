@@ -1,77 +1,49 @@
   [TOC]
 
-# useEffect로 업데이트 감지하기
+# useMemo와  useCallback
 
-[강의 URI](https://youtu.be/qdaZaC0AWq0?list=PLcqDmjxt30RtqbStQqk-eYMK8N-1SYIFn)
+[강의 URI](https://youtu.be/6H6KncvVc8s?list=PLcqDmjxt30RtqbStQqk-eYMK8N-1SYIFn)
 
-### Class 일 때 ComponentDidMount, ComponentDidUpdate, ComponentWillUnmount
+**useMemo**: 함수의 리턴값을 기억한다.
+
+**useRef**: 일반 값을 기억한다.
+
+
+
+
+
+Hooks는 전체가 다시실행됨. -> getWinNumber도 계속 실행됨
 
 ```jsx
-runTimeouts = () => {
-        const {winNumbers} =this.state;
-        for (let i=0 ; i< this.state.winNumbers.length -1 ; i++){
-            this.timeouts[i] = setTimeout ( () => {
-                this.setState((prevState) => {
-                    return {
-                        winBalls: [...prevState.winBalls, winNumbers[i]],
-                    }
-                }) ;
-            }, (i+1)* 1000);
-        }
-        this.timeouts[6] = setTimeout( () => {
-            this.setState({
-                bonus : winNumbers[6],
-                redo: true,
-            });
-        }, 7000);
-    };
-
-    timeouts = [];
-    
-    // 컴포넌트가 렌더링 되고 시작
-    componentDidMount() {
-        this.runTimeouts();
-    }
-
-    // setState 불릴 때 마다 실행됨
-    componentDidUpdate(prevProps, prevState) {
-        // redo를 눌렀을 때 동작.
-        if (this.state.winBalls.length === 0){
-            this.runTimeouts();
-        }
-    }
-
-    // 컴포넌트가 없어졌는데 timeout이 돌아가는 것을 방지
-    componentWillUnmount() {
-        this.timeouts.forEach( (v) => {
-            clearTimeout(v)
-        });
-    }
+ const [winNumbers, setWinNumbers] = useState(getWinNumbers());
 ```
 
 
 
-### Hooks일 때 
+### -> **useMemo 사용**
 
 ```jsx
-    useEffect( () => {
-        for (let i=0 ; i< winNumbers.length -1 ; i++){
-            timeouts.current[i] = setTimeout ( () => {
-                setWinBalls((prevBalls) => [...prevBalls, winNumbers[i]]);
-            }, (i+1) * 1000);
-        }
-        timeouts.current[6] = setTimeout( () => {
-            setBonus(winNumbers[6]);
-            setRedo(true);
-        }, 7000);
-
-        return () => {  //componentDidUnmount
-            timeouts.current.forEach((v) => {
-                clearTimeout(v);
-            });
-        };
-    }, [winBalls.length === 0]); 
-// 빈 배열이면 componentDidMount와 동일 (배열에는 조건, 또는 바뀌는 값을 넣어둠)
-// 배열에 요소가 있으면 componentDidMount와 ComponentDidUpdate 둘 다 수행
+const lottoNumbers = useMemo(() => getWinNumbers(), [winNumbers]);
 ```
 
+
+
+### -> **마찬가지로 useCallback 사용**
+
+```jsx
+	 const onClickRedo = useCallback(() => {
+        console.log('onClickRedo');
+        console.log(winNumbers);
+        setWinNumbers(getWinNumbers());
+        setWinBalls([]);
+        setBonus(null);
+        setRedo(false);
+        timeouts.current = []
+    }, [winNumbers]);
+```
+
+
+
+**두번째 인자는 state를 넣어준다**
+
+-> State가 바뀔 때 다시 로딩한다.
