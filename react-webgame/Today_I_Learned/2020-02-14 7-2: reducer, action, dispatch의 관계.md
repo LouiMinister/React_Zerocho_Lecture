@@ -66,6 +66,8 @@ const TicTacToe = () => {
 
 
 
+
+
 state를 직접 바꿀 수 없음
 
 action을 dispatch하면 reducer가 state가 적용해줌

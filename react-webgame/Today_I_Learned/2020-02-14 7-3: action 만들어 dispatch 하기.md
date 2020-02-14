@@ -1,20 +1,38 @@
-import React, {useCallback, useReducer} from 'react';
-import Table from './Table'
+  [TOC]
 
+# action 만들어 dispatch 하기
+
+[강의 URI](https://youtu.be/f9awvzAxkpw)
+
+
+
+#### 기존
+
+```jsx
+const [winner, setWinner] = useState('');
+const [turn, setTurn] = useState('O');
+const [tableData, setTableData] = useState([['','',''],['','',''],['','','']]);
+```
+
+위와 같이 쓸 경우 자식들에게 넘겨주기 힘 -> 하나의 **State**로 묶어서 **Reducer**로 관리
+
+
+
+###  reducer 사용
+
+**state 객체 선언**
+
+```jsx
 const initialState = {
     winner: '',
     turn: 'O',
-    tableData: [
-        ['1','2','3'],
-        ['4','5','6'],
-        ['7','8','9']
-    ],
+    tableDate: [['','',''],['','',''],['','','']],
 };
+```
 
-export const SET_WINNER = 'SET_WINNER';
-export const CLICK_CELL = 'CLICK_CELL';
-export const CHANGE_TURN = 'CHANGE_TURN';
+**reducer 함수 선언**
 
+```jsx
 const reducer = (state, action) => {
     switch(action.type) {
         case SET_WINNER : {
@@ -42,20 +60,17 @@ const reducer = (state, action) => {
         }
     }
 };
+```
 
+**useReducer 사용**
 
-
+```jsx
 const TicTacToe = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
-    // 아래처럼 따로따로 하면 넘겨주기가 힘듬.. 하나의 State로 묶어서 reducer로 관리.
-
-
-    // const [winner, setWinner] = useState('');
-    // const [turn, setTurn] = useState('O');
-    // const [tableData, setTableData] = useState([['','',''],['','',''],['','','']]);
 
     const onClickTable = useCallback( () => {
-        dispatch({type: SET_WINNER, winner: '0'});  // 액션객체, dispatch는 action을 실행시킴. dispatch 할 때 reducer 실행됨
+        dispatch({type: SET_WINNER, winner: '0'});  
+      // 액션객체, dispatch는 action을 실행시킴. dispatch 할 때 reducer 실행됨
     }, []);
 
     return (
@@ -65,5 +80,11 @@ const TicTacToe = () => {
         </>
     )
 };
+```
 
-export default TicTacToe;
+자식에게 **dispatch, tableData**를 넘겨주어서 자식에서 dispatcher를 쓸 수 있게 함.
+
+
+
+**자식**
+
