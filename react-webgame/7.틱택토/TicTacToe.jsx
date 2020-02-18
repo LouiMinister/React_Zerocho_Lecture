@@ -15,6 +15,7 @@ const initialState = {
 export const SET_WINNER = 'SET_WINNER';
 export const CLICK_CELL = 'CLICK_CELL';
 export const CHANGE_TURN = 'CHANGE_TURN';
+export const RESET_GAME = 'RESET_GAME';
 
 const reducer = (state, action) => {
     switch(action.type) {
@@ -40,6 +41,18 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 turn: state.turn ==='O' ? 'X' : 'O',
+            };
+        }
+        case RESET_GAME: {
+            return {
+                ...state,
+                turn: 'O',
+                tableData: [
+                    ['','',''],
+                    ['','',''],
+                    ['','','']
+                ],
+                recentCell: [-1, -1],
             };
         }
     }
@@ -72,10 +85,21 @@ const TicTacToe = () => {
         }
         if (win){
             dispatch({type: SET_WINNER, winner: turn});
+            dispatch({type:RESET_GAME});
             console.log(win);
         } else {
-
-            // 무승부 검
+            let all = true; // all 이 true 면 무승부라는 뜻
+            tableData.forEach((row) => {
+                row.forEach((cell) =>{
+                    if(!cell){
+                        all = false;
+                    }
+                });
+            });
+            // 무승부인 경우
+            if (all) {
+                dispatch({type:RESET_GAME});
+            }
         }
         dispatch({ type: CHANGE_TURN });
     }, [recentCell]);
