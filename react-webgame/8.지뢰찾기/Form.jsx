@@ -1,5 +1,6 @@
 import React, {useState, useCallback, useContext} from 'react';
 import {START_GAME, TableContext} from "./MineSearch";
+import Td from "./Td";
 
 const Form = () => {
     const [row, setRow] = useState(10);
@@ -28,28 +29,9 @@ const Form = () => {
             <input type="number" placeholder="세로" value={row} onChange={onChangeRow} />
             <input type="number" placeholder="세로" value={cell} onChange={onChangeCell} />
             <input type="number" placeholder="세로" value={mine} onChange={onChangeMine} />
-            <button onClick={onClickBtn}시작< /button>
+            <button onClick={onClickBtn}>시작</button>
         </div>
-    )
+    );
 };
 
-import React, {useState} from 'react';
-
-const Form = () => {
-    const [row, setRow] = useState(10);
-    const [cell, setCell] = useState(10);
-    const [mine, setMine] = useState(20);
-
-    const oncChangeRow = useCallback( (e) => {
-        setRow(e.target.value);
-    }, [])
-
-    return (
-        <div>
-            <input type="number" placeholder="세로" value={row} onChange={onChangeRow} />
-            <input type="number" placeholder="세로" value={cell} onChange={onChangeCell} />
-            <input type="number" placeholder="세로" value={mine} onChange={onChangeMine} />
-        </div>
-    )
-};
-
+export default Form;
