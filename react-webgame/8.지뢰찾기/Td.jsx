@@ -1,5 +1,5 @@
 import React, {useContext, useCallback} from 'react'
-import {CLICK_MINE, CODE, NORMALIZE_CELL, OPEN_CELL, QUESTION_CELL, TableContext, FLAG_CELL} from "./MineSearch";
+import {CLICK_MINE, CODE, NORMALIZE_CELL, OPEN_CELL,QUESTION_CELL, TableContext, FLAG_CELL} from "./MineSearch";
 
 const getTdStyle = (code) => {
     switch (code) {
@@ -86,7 +86,7 @@ const Td = ({rowIndex, cellIndex}) =>{
         switch (tableData[rowIndex][cellIndex]) {
             case CODE.NORMAL:
             case CODE.MINE:
-                dispatch({type: FALG_CELL, row:rowIndex, cell: cellIndex});
+                dispatch({type: FLAG_CELL, row:rowIndex, cell: cellIndex});
                 return;
             case CODE.FLAG:
             case CODE.FLAG_MINE:
@@ -103,8 +103,8 @@ const Td = ({rowIndex, cellIndex}) =>{
 
     return(
         <td style={getTdStyle(tableData[rowIndex][cellIndex])}
-        onClick={onClickTd}>
-        onContextMenu={onRightClickTd}
+        onClick={onClickTd}
+        onContextMenu={onRightClickTd}>
             {getTdText(tableData[rowIndex][cellIndex])}
         </td>
     );
