@@ -5,7 +5,7 @@ const Table = ({boardStatus}) => {
 
     return(<>
         <table>
-            {Array(boardStatus.length).fill().map( (element, index, array) => (<Tr boardStatus={boardStatus[index]} />)
+            {boardStatus.map( (element, index, array) => {return <Tr boardStatus={boardStatus[index]} />}
                 
             )}
          
