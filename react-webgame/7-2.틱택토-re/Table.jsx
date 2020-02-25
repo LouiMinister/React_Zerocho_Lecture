@@ -1,13 +1,14 @@
 import React from 'react'
 import Tr from './Tr'
 
-const Table = () => {
+const Table = ({boardStatus}) => {
 
     return(<>
         <table>
-            <Tr />
-            <Tr />
-            <Tr />
+            {Array(boardStatus.length).fill().map( (element, index, array) => (<Tr boardStatus={boardStatus[index]} />)
+                
+            )}
+         
         </table>
     </>);
 }

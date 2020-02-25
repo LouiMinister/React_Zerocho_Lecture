@@ -2,13 +2,13 @@ import React from 'react'
 import Td from './Td'
 
 
-const Tr = () => {
+const Tr = ({boardStatus}) => {
     
     return(<>
         <tr>
-            <Td />
-            <Td />
-            <Td />
+            <Td boardStatus={boardStatus}/>
+            <Td boardStatus={boardStatus}/>
+            <Td boardStatus={boardStatus}/>
         </tr>
     </>);
 }

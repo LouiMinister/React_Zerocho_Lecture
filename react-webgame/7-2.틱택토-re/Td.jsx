@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Td = () => {
+const Td = ({boardStatus}) => {
     
     return(<>
-        <td>ㅁ</td>
+        <td>{boardStatus[1]}</td>
     </>);
 }
-
 export default Td;
