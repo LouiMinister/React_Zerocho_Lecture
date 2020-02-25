@@ -2,13 +2,11 @@ import React from 'react'
 import Td from './Td'
 
 
-const Tr = ({boardStatus}) => {
+const Tr = ({boardRow, rowIndex}) => {
     
     return(<>
         <tr>
-            <Td boardStatus={boardStatus}/>
-            <Td boardStatus={boardStatus}/>
-            <Td boardStatus={boardStatus}/>
+            {boardRow.map((element, index) => (<Td boardCell={element} rowIndex={rowIndex} colIndex={index}/>))}
         </tr>
     </>);
 }

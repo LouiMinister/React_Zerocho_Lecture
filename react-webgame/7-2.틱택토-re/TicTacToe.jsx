@@ -9,13 +9,19 @@ const TicTacToe = () => {
         ['4','5','6'],
         ['7','8','9']
     ]);
+\
     
     const event = () => useCallback( ()=>{setSample( sample=='changed' ? 'not changed' : 'changed' ), [] });
+    const event2 = (text) => useCallback( ()=>{setSample(text), [] });
+
+    const clickTd = (rowIndex, colIndex) => useCallback( ()=>{
+        
+    } );
 
     return(
         <>
             <div>
-                <button onClick={event}></button>
+                <button onClick={event2("text")}></button>
                 {sample}
                 ㅁㄴㅇㄹㅁㄴㅇㄹ
             </div>

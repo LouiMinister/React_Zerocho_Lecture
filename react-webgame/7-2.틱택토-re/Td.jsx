@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Td = ({boardStatus}) => {
+const Td = ({boardCell, rowIndex, colIndex}) => {
     
     return(<>
-        <td>{boardStatus[1]}</td>
+        <td>{''+boardCell + rowIndex + colIndex}</td>
     </>);
 }
 export default Td;
