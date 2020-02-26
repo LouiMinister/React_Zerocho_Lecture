@@ -1,11 +1,11 @@
 import React from 'react'
 import Tr from './Tr'
 
-const Table = ({boardStatus}) => {
+const Table = ({boardStatus, clickTd}) => {
 
     return(<>
         <table>
-            {boardStatus.map( (element, index) => (<Tr boardRow={element} rowIndex={index} />))}        
+            {boardStatus.map( (element, index) => (<Tr boardRow={element} rowIndex={index} clickTd={clickTd}/>))}        
         </table>
     </>);
 }

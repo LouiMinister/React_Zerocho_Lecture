@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Td = ({boardCell, rowIndex, colIndex}) => {
+const Td = ({boardCell, rowIndex, colIndex, clickTd}) => {
     
     return(<>
-        <td>{''+boardCell + rowIndex + colIndex}</td>
+        <td onClick={clickTd(rowIndex, colIndex)}>{boardCell}</td>
     </>);
 }
 export default Td;
