@@ -75,8 +75,6 @@ const TicTacToe = () => {
     }, [winner]);
 
 
-
-
     // 칸 클릭했을 경우 이벤트 핸들링
     const clickTd = (rowIndex, colIndex) => useCallback( ()=>{
         if(boardStatus[rowIndex][colIndex]!=''){
@@ -106,11 +104,8 @@ const TicTacToe = () => {
             ['','',''],
             ['','','']
         ]);
+        setPickedCell('');
     }, []);
-
-    
-
-
 
     return(
         <>
@@ -123,7 +118,7 @@ const TicTacToe = () => {
                 승자 : {winner}
             </div>
             <div>
-               <Table boardStatus={boardStatus} clickTd={clickTd}/>
+               <Table boardStatus={boardStatus} clickTd={clickTd} pickedCell={pickedCell}/>
             </div>
         </>
     );
