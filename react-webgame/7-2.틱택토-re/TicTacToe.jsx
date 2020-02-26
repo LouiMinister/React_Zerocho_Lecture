@@ -9,6 +9,7 @@ const TicTacToe = () => {
         ['','',''],
         ['','','']
     ]);
+    const [pickedCell, setPickedCell] = useState({rowIndex:'', cellIndex:''});
     const [turn, setTurn] = useState('O');
     const [winner, setWinner] = useState('');
 
@@ -25,33 +26,53 @@ const TicTacToe = () => {
     };
     const event2 = (text) => useCallback( ()=>{setSample(text)}, [] );
 
+    // state.boardStatus 바뀔 때 마다 게임 결과 파악
     useEffect ( () => {
         const result = '';
-        var prevTd ='';
+        var rowBar =[];
+        var colBar =[];
+        var diagBar1 = [];
+        var diagBar2 = [];
 
-        // 가로줄 일치여부 확인
-        boardStatus.forEach( (boardRow, index) => {
-            boardRow.forEach( (cell, index) => {
-                // 처음 열에서는 조건 체크 안하고 prev에 값 등록
-                if(index==0){
-                    prevTd = cell;
-                // 두번째 부터는 값 체크
-                } else {
-                    // 저번 cell의 값과 이번 cell 의 값이 다르면 loop break
-                    if(prevTd !== cell){ break;}
-                    // 저번 cell의 값과 이번 cell의 값이 같으면 prevTd에 등록하고 진행
-                    else {
-                        prevTd = cell;
-                        // 현재 보고 있는 cell이 마지막 셀이면 승자 결정
-                        if(index === boardStatus.length-1){
-                            setWinner(prevTd);
-                        }
-                    } 
-                }
+        // 가로, 세로줄 일치여부 확인
+        boardStatus.forEach( (boardRow, rowIndex) => {
+            boardRow.forEach( (cell, colIndex) => {
+                rowBar.push(boardStatus[rowIndex][colIndex]);
+                colBar.push(boardStatus[colIndex][rowIndex]);
             });
+    
+            if(rowBar[0] !== '' && rowBar.every((element => element === rowBar[0]))){
+                setWinner(rowBar[0]);
+                return;
+            }
+            if(colBar[0] !== '' && colBar.every((element => element === colBar[0]))){
+                setWinner(colBar[0]);
+                return;
+            }
+            rowBar = [];
+            colBar = [];
+
+            
+            diagBar1.push(boardStatus[rowIndex][rowIndex]);
+            diagBar2.push(boardStatus[boardStatus.length-1-rowIndex][rowIndex]);
         });
-        
+        console.log(diagBar1);
+        console.log(diagBar2);
+        if(diagBar1[0]!== '' && diagBar1.every((element => element === diagBar1[0]))){
+            setWinner(diagBar1[0]);
+            return;
+        }
+        if(diagBar2[0]!== '' && diagBar2.every((element => element === diagBar2[0]))){
+            setWinner(diagBar2[0]);
+            return;
+        } 
     },[boardStatus]);
+
+    useEffect( () => {
+        if (winner !==''){
+            clearBoard();
+        }
+    }, [winner]);
 
 
 
@@ -61,8 +82,12 @@ const TicTacToe = () => {
         if(boardStatus[rowIndex][colIndex]!=''){
             return;
         }
+        // 선택한 셀 state 업데이트
+        setPickedCell({rowIndex, colIndex});
+
         // 턴 변경
         const _turn = (turn === 'O' ? 'X' : 'O');
+
         // 선택한 td에 체크
         const _boardStatus = [...boardStatus];
         _boardStatus[rowIndex] = [...boardStatus[rowIndex]];
@@ -95,6 +120,7 @@ const TicTacToe = () => {
                 <button onClick={clickTd(1,1)}>이벤트3</button>
                 {sample}
                 ㅁㄴㅇㄹㅁㄴㅇㄹ
+                승자 : {winner}
             </div>
             <div>
                <Table boardStatus={boardStatus} clickTd={clickTd}/>
