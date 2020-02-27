@@ -121,7 +121,8 @@ const TicTacToe = () => {
                <Table boardStatus={boardStatus} clickTd={clickTd} pickedCell={pickedCell}/>
             </div>
             <div>
-                {winner!=='' && <p>winner가 승리하였습니다.</p>}
+                {winner!=='' && <p>winner가 승리하였습니다.</p>
+                                <p><button onClick={clearBoard}>다시하기</button></p> }
             </div>
         </>
     );
